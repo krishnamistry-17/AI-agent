@@ -19,8 +19,8 @@ export default function Sidebar() {
       {/* Mobile menu button */}
       <button
         onClick={() => setShowSidebar(!showSidebar)}
-        className="fixed top-4 left-4 z-50 md:hidden
-                   rounded-md bg-card border border-page
+        className="fixed top-2 left-2 z-50 md:hidden
+                 
                    px-3 py-2 text-foreground"
         aria-label="Toggle sidebar">
         {showSidebar ? "✕" : "☰"}

@@ -1,12 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import { ToastContainer } from 'react-toastify'
+/** @format */
 
-createRoot(document.getElementById('root')!).render(
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+
+import { ToastContainer } from "react-toastify";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/router.tsx";
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ToastContainer/>
-    <App />
+    <RouterProvider router={router} />
+    <ToastContainer autoClose={3000} position="top-right" />
   </StrictMode>,
-)
+);
